@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{% load static %}
+	<title>Snapper</title>
+	
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y8B9TC6JCF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y8B9TC6JCF');
+</script>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="/static/images/logo.png"/>
+	<link rel="stylesheet" type="text/css" href="/static/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/static/fonts/iconic/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" type="text/css" href="/static/fonts/linearicons-v1.0.0/icon-font.min.css">
+	<link rel="stylesheet" type="text/css" href="/static/vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="/static/vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="/static/vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href="/static/vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="/static/vendor/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="/static/vendor/slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="/static/vendor/MagnificPopup/magnific-popup.css">
+	<link rel="stylesheet" type="text/css" href="/static/vendor/perfect-scrollbar/perfect-scrollbar.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/util.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/main.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-3Eq8WNx9dx2rhqZLxiznHHbOhJwSlx6eu6s9RbSCj5s7w5RIb05DYoQWym/6ub/qFHT8DvLsb4SyFgpVH6+kZA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="animsition">
+	<header>
+		<!-- Header desktop -->
+		<div class="container-menu-desktop">
+			<div class="wrap-menu-desktop">
+				<nav class="limiter-menu-desktop container">
+					
+					<!-- Logo desktop -->		
+					<a href="{% url 'index' %}" class="logo">
+						<img src="/static/images/logo.png" alt="IMG-LOGO"> 
+						<p>SNAPPER</p>
+					</a>
+	
+					<!-- Menu desktop -->
+					<div class="menu-desktop">
+						<ul class="main-menu">
+							<li class="active-menu">
+								<a href="{% url 'index' %}">Home</a>
+								<!--<ul class="sub-menu">
+									<li><a href="index.html">Homepage 1</a></li>
+									<li><a href="home-02.html">Homepage 2</a></li>
+									<li><a href="home-03.html">Homepage 3</a></li>
+								</ul>-->
+							</li>
+							<li>
+								<a href="{% url 'company-profile' %}">Company Profile</a>
+							</li>
+							<li>
+								<a href="#">Our Products</a>
+								<ul class="sub-menu">
+									<li><a href="{% url 'categories' 'T-Shirts' %}">T-shirt</a></li>
+						            <li><a href="{% url 'categories' 'Sweat-Shirt' %}">Sweat Shirt</a></li>
+									<li><a href="{% url 'categories' 'Track-Suit' %}">Track Suit</a></li>
+									<li><a href="{% url 'categories' 'Shorts' %}">Shorts</a></li>
+									<li><a href="{% url 'categories' 'Track-Pants' %}">Track Pants</a></li>
+									<li><a href="{% url 'categories' 'Waist-Wear' %}">Waist Wear</a></li>
+								</ul>
+							</li>
+	
+							<li>
+				<a href="{% url 'categories' 'Compression-Series' %}">Compression Series</a>
+			</li>
+			<li>
+				<a href="https://www.youtube.com/@prashanttanwar9538">Blogs</a>
+			</li>
+							<li class="contact">
+								<a href="{% url 'contact' %}" class="text-white">Contact us</a>
+							</li>
+						</ul>
+					</div>	
+				</nav>
+			</div>	
+		</div>
+	
+		<!-- Header Mobile -->
+		<div class="wrap-header-mobile">
+			<!-- Logo moblie -->		
+			<div class="logo-mobile">
+				<a href="{% url 'index' %}"><img src="/static/images/logo.png" alt="IMG-LOGO"></a>
+				<p>SNAPPER</p>
+			</div>
+	
+			<!-- Icon header -->
+			<div class="wrap-icon-header flex-w flex-r-m m-r-15">
+				<div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 js-show-modal-search">
+					<i class="zmdi zmdi-search"></i>
+				</div>
+	
+				
+			</div>
+	
+			<!-- Button show menu -->
+			<div class="btn-show-menu-mobile hamburger hamburger--squeeze">
+				<span class="hamburger-box is-active">
+					<span class="hamburger-inner"></span>
+				</span>
+			</div>
+		</div>
+	
+	
+		<!-- Menu Mobile -->
+		<div class="menu-mobile" style="display: none;">
+			
+	
+			<ul class="main-menu-m">
+				<li class="active-menu">
+					<a href="{% url 'index' %}">Home</a>
+				</li>
+	
+				<li>
+					<a href="{% url 'company-profile' %}">Company Profile</a>
+
+				</li>
+				<li>
+					<a href="#">Our Products</a>
+					<span class="arrow-main-menu-m">
+						<i class="fa fa-angle-right" aria-hidden="true"></i>
+					</span>
+					<ul class="sub-menu-m">
+						<li><a href="{% url 'categories' 'T-Shirts' %}">T-shirt</a></li>
+						<li><a href="{% url 'categories' 'Sweat-Shirt' %}">Sweat Shirt</a></li>
+						<li><a href="{% url 'categories' 'Track-Suit' %}">Track Suit</a></li>
+						<li><a href="{% url 'categories' 'Shorts' %}">Shorts</a></li>
+						<li><a href="{% url 'categories' 'Track-Pants' %}">Track Pants</a></li>
+						<li><a href="{% url 'categories' 'Waist-Wear' %}">Waist Wear</a></li>
+					</ul>
+				</li>
+
+				<li>
+					<a href="{% url 'categories' 'Compression-Series' %}">Compression Series</a>
+				</li>
+				<li>
+					<a href="https://www.youtube.com/@prashanttanwar9538">Blogs</a>
+				</li>
+				<li>
+					<a href="{% url 'contact' %}">Contact us</a>
+				</li>
+			</ul>
+		</div>
+	
+		<!-- Modal Search -->
+		<div class="modal-search-header flex-c-m trans-04 js-hide-modal-search">
+			<div class="container-search-header">
+				<button class="flex-c-m btn-hide-modal-search trans-04 js-hide-modal-search">
+					<img src="/static/images/icons/icon-close2.png" alt="CLOSE">
+				</button>
+	
+				<form class="wrap-search-header flex-w p-l-15">
+					<button class="flex-c-m trans-04">
+						<i class="zmdi zmdi-search"></i>
+					</button>
+					<input class="plh3" type="text" name="search" placeholder="Search...">
+				</form>
+			</div>
+		</div>
+	</header>
+	<div class="search">
+		<a href=" https://www.facebook.com/share/EtrRmQqoG6LNgSjQ/?mibextid=LQQJ4d" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+			<i class="fa fa-facebook"></i>
+		</a>
+		<br>
+	
+		<a href=" https://www.instagram.com/snapper.co.in?igsh=NzFpMGExOXRlNmFv&utm_source=qr" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+			<i class="fa fa-instagram"></i>
+		</a>
+		<br>
+		<a href="https://youtube.com/@prashanttanwar9538?si=843HIHfhnw4f4_Gp" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+			<i class="fa fa-youtube"></i>
+		</a>
+	</div>
+	<div class="whatahsp">
+        <a href="https://wa.me/9899893559" title="Whatsapp"><img src="/static/images/whatsapp.png" alt="Whatsapp image" title="Whatsapp" width="60px" style="margin-top: 5px;"></a>
+         <a href="tel:9899863559" title="Call"><img src="/static/images/call.png" title="Call" alt="Call" width="60px" style="margin-top: 5px;"></a>
+          <a href="mailto:prashanttanwar1992@gmail.com?subject=SNAPPER INQUIRY&bcc=ravibaks@gmail.com" title="E-mail"><img src="/static/images/email.png" title="E-mail" alt="E-mail" width="60px" style="margin-top: 5px;"></a>
+    </div>
+
+	{% block body %} {% endblock %}
+
+	<!-- Footer -->
+	<footer class="bg3 p-t-75 p-b-32">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-lg-3 p-b-50">
+					<h4 class="stext-301 cl0 p-b-30">
+						Categories
+					</h4>
+
+					<ul>
+						<li class="p-b-10">
+							<a href="{% url 'categories' 'T-Shirts' %}" class="stext-107 cl7 hov-cl1 trans-04">
+								T-shirt
+							</a>
+						</li>
+
+						<li class="p-b-10">
+							<a href="{% url 'categories' 'Sweat-Shirt' %}" class="stext-107 cl7 hov-cl1 trans-04">
+								Sweat Shirt
+							</a>
+						</li>
+
+						<li class="p-b-10">
+							<a href="{% url 'categories' 'Track-Pants' %}" class="stext-107 cl7 hov-cl1 trans-04">
+								Track Suit
+							</a>
+						</li>
+
+						
+						<li class="p-b-10">
+							<a href="{% url 'categories' 'Shorts' %}" class="stext-107 cl7 hov-cl1 trans-04">
+								Shorts
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="col-sm-6 col-lg-3 p-b-50">
+					<h4 class="stext-301 cl0 p-b-30">
+						Quick Links
+					</h4>
+
+					<ul>
+						<li class="p-b-10">
+							<a href="{% url 'index' %}" class="stext-107 cl7 hov-cl1 trans-04">
+								Home
+							</a>
+						</li>
+
+						<li class="p-b-10">
+							<a href="{% url 'company-profile' %}" class="stext-107 cl7 hov-cl1 trans-04">
+								Company Profile
+							</a>
+						</li>
+
+						<li class="p-b-10">
+							<a href="{% url 'contact' %}" class="stext-107 cl7 hov-cl1 trans-04">
+								Contact us
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="col-sm-6 col-lg-3 p-b-50">
+					<h4 class="stext-301 cl0 p-b-30">
+						GET IN TOUCH
+					</h4>
+					<h4 class="stext-301 cl0 p-b-0">
+						AWESOME
+					</h4>
+					
+					<p class="stext-107 cl7 size-201">
+						<i class="fa fa-location"></i>Mr. Prashant Tanwar
+					</p>
+
+					<p class="stext-107 cl7 size-201">
+					<a href="tel:9899863559" class="text-white"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+						<path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+					  </svg>	+91-9899863559 </a>
+					</p>
+					
+					<p class="stext-107 cl7 size-201"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+						<path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
+					  </svg>
+						<a href="mailto:prashanttanwar1992@gmail.com" class="text-white" style="font-size:14.9px;">
+						prashanttanwar1992@gmail.com
+					</a>
+					
+					</p>
+					<p class="stext-107 cl7 size-201">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+							<path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+						  </svg>	 16/ 1075 , Ground Floor left side, Krishna Gali, khalsa nagar tank road , New delhi - 110005. 
+					</p>
+
+					
+				</div>
+
+<div class="col-sm-6 col-lg-3 p-b-50">
+					<h4 class="stext-301 cl0 p-b-30">
+						Useful Links
+					</h4>
+
+					
+					<ul>
+						<li class="p-b-10">
+							<a href="{% url 'privacy-policy' %}" class="stext-107 cl7 hov-cl1 trans-04">
+								Privacy Policy
+							</a>
+						</li>
+
+						<li class="p-b-10">
+							<a href="{% url 'disclaimer' %}" class="stext-107 cl7 hov-cl1 trans-04">
+								Disclaimer
+							</a>
+						</li>
+
+<li class="p-b-10">
+							<a href="{% url 'terms-and-conditions' %}" class="stext-107 cl7 hov-cl1 trans-04">
+								Terms and Conditions
+							</a>
+						</li>
+						<li class="p-b-10">
+							<a href="{% url 'sitemap' %}" class="stext-107 cl7 hov-cl1 trans-04">
+								Sitemap
+							</a>
+						</li>
+					</ul>
+					
+				</div>
+			</div>
+
+			<div class="p-t-40">
+
+
+				<p class="stext-107 cl6 txt-center">
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Design and Developed by <a href="https://highxbrand.com" target="_blank">Highxbrand India Pvt. Ltd.</a> 
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+
+				</p>
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- Back to top -->
+	<div class="btn-back-to-top" id="myBtn">
+		<span class="symbol-btn-back-to-top">
+			<i class="zmdi zmdi-chevron-up"></i>
+		</span>
+	</div>
+
+	<!-- Modal -->
+	<div class="wrap-modal1 js-modal1 p-t-60 p-b-20">
+		<div class="overlay-modal1 js-hide-modal1"></div>
+
+		<div class="container">
+			<div class="bg0 p-t-60 p-b-30 p-lr-15-lg how-pos3-parent">
+				<button class="how-pos3 hov3 trans-04 js-hide-modal1">
+					<img src="/static/images/icons/icon-close.png" alt="CLOSE">
+				</button>
+
+				<div class="row">
+					<div class="col-md-6 col-lg-7 p-b-30">
+						<div class="p-l-25 p-r-30 p-lr-0-lg">
+							<div class="wrap-slick3 flex-sb flex-w">
+								<div class="wrap-slick3-dots"></div>
+								<div class="wrap-slick3-arrows flex-sb-m flex-w"></div>
+
+								<div class="slick3 gallery-lb">
+									<div class="item-slick3" data-thumb="images/product-detail-01.jpg">
+										<div class="wrap-pic-w pos-relative">
+											<img src="/static/images/product-detail-01.png" alt="IMG-PRODUCT">
+
+											<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="/static/images/product-detail-01.png">
+												<i class="fa fa-expand"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-5 p-b-30">
+						<div class="p-r-50 p-t-5 p-lr-0-lg">
+							<h4 class="mtext-105 cl2 js-name-detail p-b-14">
+								Mens Sports T-shirt
+							</h4>
+							<p class="stext-102 cl3 p-t-23">
+								Introducing our latest line of sports t-shirts, designed to elevate your performance and style on and off the field. Crafted with the athlete in mind, our sports t-shirts are the perfect blend of comfort, functionality, and fashion.
+							</p>
+							<p class="stext-102 cl3 p-t-23">
+								Constructed from high-quality, moisture-wicking fabrics, these t-shirts keep you cool and dry even during the most intense workouts. The breathable materials ensure maximum ventilation, allowing you to focus solely on your game without feeling weighed down.
+							</p>
+							<p class="stext-102 cl3 p-t-23">
+							With a range of designs and colors, our sports t-shirts cater to every athlete's taste and preference. Whether you prefer classic neutrals or bold, eye-catching prints, we have something for everyone. The sleek, modern designs are not only functional but also effortlessly stylish, making a statement both on and off the field.
+						</p>
+							<!--  -->
+					
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- Modal -->
+	<div class="wrap-modal1 js-modal1 p-t-60 p-b-20">
+		<div class="overlay-modal1 js-hide-modal1"></div>
+
+		<div class="container">
+			<div class="bg0 p-t-60 p-b-30 p-lr-15-lg how-pos3-parent">
+				<button class="how-pos3 hov3 trans-04 js-hide-modal1">
+					<img src="/static/images/icons/icon-close.png" alt="CLOSE">
+				</button>
+
+				<div class="row">
+					<div class="col-md-6 col-lg-7 p-b-30">
+						<div class="p-l-25 p-r-30 p-lr-0-lg">
+							<div class="wrap-slick3 flex-sb flex-w">
+								<div class="wrap-slick3-dots"></div>
+								<div class="wrap-slick3-arrows flex-sb-m flex-w"></div>
+
+								<div class="slick3 gallery-lb">
+									<div class="item-slick3" data-thumb="images/product-detail-01.jpg">
+										<div class="wrap-pic-w pos-relative">
+											<img src="/static/images/product-detail-01.png" alt="IMG-PRODUCT">
+
+											<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="/static/images/product-detail-01.png">
+												<i class="fa fa-expand"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-5 p-b-30">
+						<div class="p-r-50 p-t-5 p-lr-0-lg">
+							<h4 class="mtext-105 cl2 js-name-detail p-b-14">
+								Mens Sports T-shirt
+							</h4>
+							<p class="stext-102 cl3 p-t-23">
+								Introducing our latest line of sports t-shirts, designed to elevate your performance and style on and off the field. Crafted with the athlete in mind, our sports t-shirts are the perfect blend of comfort, functionality, and fashion.
+							</p>
+							<p class="stext-102 cl3 p-t-23">
+								Constructed from high-quality, moisture-wicking fabrics, these t-shirts keep you cool and dry even during the most intense workouts. The breathable materials ensure maximum ventilation, allowing you to focus solely on your game without feeling weighed down.
+							</p>
+							<p class="stext-102 cl3 p-t-23">
+							With a range of designs and colors, our sports t-shirts cater to every athlete's taste and preference. Whether you prefer classic neutrals or bold, eye-catching prints, we have something for everyone. The sleek, modern designs are not only functional but also effortlessly stylish, making a statement both on and off the field.
+						</p>
+							<!--  -->
+					
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="/static/vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script src="/static/vendor/animsition/js/animsition.min.js"></script>
+	<script src="/static/vendor/bootstrap/js/popper.js"></script>
+	<script src="/static/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="/static/vendor/select2/select2.min.js"></script>
+	<script>
+		$(".js-select2").each(function(){
+			$(this).select2({
+				minimumResultsForSearch: 20,
+				dropdownParent: $(this).next('.dropDownSelect2')
+			});
+		})
+	</script>
+	<script src="/static/vendor/daterangepicker/moment.min.js"></script>
+	<script src="/static/vendor/daterangepicker/daterangepicker.js"></script>
+	<script src="/static/vendor/slick/slick.min.js"></script>
+	<script src="/static/js/slick-custom.js"></script>
+	<script src="/static/vendor/parallax100/parallax100.js"></script>
+	<script>
+        $('.parallax100').parallax100();
+	</script>
+	<script src="/static/vendor/MagnificPopup/jquery.magnific-popup.min.js"></script>
+	<script>
+		$('.gallery-lb').each(function() { // the containers for all your galleries
+			$(this).magnificPopup({
+		        delegate: 'a', // the selector for gallery item
+		        type: 'image',
+		        gallery: {
+		        	enabled:true
+		        },
+		        mainClass: 'mfp-fade'
+		    });
+		});
+	</script>
+	<script src="/static/vendor/isotope/isotope.pkgd.min.js"></script>
+	<script src="/static/vendor/sweetalert/sweetalert.min.js"></script>
+	<script>
+		$('.js-addwish-b2').on('click', function(e){
+			e.preventDefault();
+		});
+
+		$('.js-addwish-b2').each(function(){
+			var nameProduct = $(this).parent().parent().find('.js-name-b2').html();
+			$(this).on('click', function(){
+				swal(nameProduct, "is added to wishlist !", "success");
+
+				$(this).addClass('js-addedwish-b2');
+				$(this).off('click');
+			});
+		});
+
+		$('.js-addwish-detail').each(function(){
+			var nameProduct = $(this).parent().parent().parent().find('.js-name-detail').html();
+
+			$(this).on('click', function(){
+				swal(nameProduct, "is added to wishlist !", "success");
+
+				$(this).addClass('js-addedwish-detail');
+				$(this).off('click');
+			});
+		});
+
+		$('.js-addcart-detail').each(function(){
+			var nameProduct = $(this).parent().parent().parent().parent().find('.js-name-detail').html();
+			$(this).on('click', function(){
+				swal(nameProduct, "is added to cart !", "success");
+			});
+		});
+	
+	</script>
+	<script src="/static/vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+	<script>
+		$('.js-pscroll').each(function(){
+			$(this).css('position','relative');
+			$(this).css('overflow','hidden');
+			var ps = new PerfectScrollbar(this, {
+				wheelSpeed: 1,
+				scrollingThreshold: 1000,
+				wheelPropagation: false,
+			});
+
+			$(window).on('resize', function(){
+				ps.update();
+			})
+		});
+	</script>
+	<script src="/static/js/main.js"></script>
+</body>
+</html>
